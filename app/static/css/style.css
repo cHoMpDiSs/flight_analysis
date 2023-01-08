@@ -1,0 +1,15 @@
+body {
+    background-image: url("coffee.jpg");
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+h1, a{
+    color: rgb(120, 91, 149);
+    font: 32px  Monospace, serif;
+}
+
+h3,li{
+    color:rgb(120, 91, 149);
+    font:Monospace;
+    
+}

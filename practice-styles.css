@@ -1,0 +1,47 @@
+body {
+    background-image: url("coffee.jpg");
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(236, 232, 240);
+    font: 32px  Monospace, serif;
+}
+
+h2,p,address,form,label,td,tr{
+    color: rgb(236, 232, 240);
+    font:Monospace;
+    
+}
+
+
+table {
+    
+    border-color: rgb(7, 7, 7);
+    border:7px;
+    border-style: solid;
+    padding-left: 25px;
+    background-color: rgb(54, 54, 54);
+    width: 50%;
+}
+
+thead {
+    text-align: left;
+    
+}
+
+label {
+    display: block;
+}
+
+#submit-btn {
+    background-color: black;
+    color:#cad3cd;
+    display: block;
+    
+}
+
+#phone {
+    color:rgb(255, 232, 255);
+}
+

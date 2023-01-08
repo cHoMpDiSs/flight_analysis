@@ -1,6 +1,21 @@
-pip install requests
-pip install html5lib
-pip install bs4
-pip install pandas
+requests
+html5lib
+schdule
+bs4
+pandas
+madplotlib
+Flask==2.0.1
+alembic==1.6.5
+Flask-Migrate==3.0.1
+Flask-SQLAlchemy==2.5.1
+psycopg2-binary==2.9.1
+SQLAlchemy==1.4.17
+APScheduler
+
 
 #python -m flask run
+
+# set FLASK_APP=run.py flask run
+
+export FLASK_APP=run.py FLASK_ENV=development && flask run
+pip install https://github.com/mitsuhiko/flask/tarball/master

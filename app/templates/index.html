@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="static/css/style.css"/>
+    <title>Jordon's Flight Analysis</title>
+<head/>
+<body>
+    <h1>Flight Analysis</h1>
+    <section>
+        <div>
+        <a href="http://127.0.0.1:5000/barplot" size:150%>Bar Plot in Matplotlib</a>
+        </div>
+
+        <div>
+            <a href="http://127.0.0.1:5000/pandas">Pandas DataFrame</a>
+        </div>
+        <h3>FLIGHT DELAYS USA</h3>
+        <ul>
+            {% for item in data1 %}
+                <li>Number of flights USA:{{item.number_of_delays}}</li>
+                <li>Time data recorded:{{item.day_recorded}}</li>
+            {% endfor %}
+
+        </ul>
+        <h3>FLIGHT DELAYS WORLDWIDE</h3>
+        <ul>
+            {% for item in data2 %}
+                <li>Number of flights WW:{{item.number_of_delays_ww}}</li>
+                <li>Time data recorded:{{item.day_recorded}}</li>
+            {% endfor %}
+
+        </ul>
+        <h3>FLIGHT CANCELLATIONS USA</h3>
+        <ul>
+            {% for item in data3 %}
+                <li>Number of flights USA:{{item.number_of_cancellations_usa}}</li>
+                <li>Time data recorded:{{item.day_recorded}}</li>
+            {% endfor %}
+
+        </ul>
+        <h3>FLIGHT CANCELLATIONS WORLDWIDE</h3>
+        <ul>
+            {% for item in data4 %}
+                <li>Number of flights WW:{{item.number_of_cancellations_ww}}</li>
+                <li>Time data recorded:{{item.day_recorded}}</li>
+            {% endfor %}
+
+        </ul>
+        </ul>
+    </section>
+
+</body>  
