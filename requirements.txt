@@ -4,7 +4,7 @@ schdule
 bs4
 pandas
 madplotlib
-Flask==2.0.1
+Flask==2.3.0
 alembic==1.6.5
 Flask-Migrate==3.0.1
 Flask-SQLAlchemy==2.5.1
@@ -17,5 +17,4 @@ APScheduler
 
 # set FLASK_APP=run.py flask run
 
-export FLASK_APP=run.py FLASK_ENV=development && flask run
-pip install https://github.com/mitsuhiko/flask/tarball/master
+# export FLASK_APP=run.py FLASK_ENV=development && flask run
