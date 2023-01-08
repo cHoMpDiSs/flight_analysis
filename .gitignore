@@ -14,5 +14,5 @@ ENV/
 env.bak/
 venv.bak/
 
-.secret
+secret.py
 
