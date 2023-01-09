@@ -26,6 +26,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 sched = BackgroundScheduler()
 sched.add_job(func=flight_data.update_flight_data, trigger='interval',days=1)
 sched.add_job(func=flight_data.cut_off_delay_usa, trigger='interval',days=1)
+sched.add_job(func=scraper.plotting, trigger='interval',days=1)
 sched.start()
 
 
