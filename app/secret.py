@@ -1,0 +1,1 @@
+SECRET_STRING = 'postgresql://postgres:admin1234@flightdata.csdqntuzqv8v.us-west-1.rds.amazonaws.com:5432/flightdata'

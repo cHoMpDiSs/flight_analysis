@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, flash, redirect
 # from datetime import datetime, date, timedelta
 # from app import db, app, views
 # from app.models import *
-
+from app import app
 
  
 
