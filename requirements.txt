@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> b60838e21873c946e9a500b61c53dad283e4a55e
 requests==2.7.0
 schedule==1.1.0
 bs4==0.0.1
@@ -14,7 +11,4 @@ Flask-SQLAlchemy==2.5.1
 psycopg2-binary==2.9.1
 SQLAlchemy==1.4.17
 APScheduler==3.9.1.post1
-<<<<<<< HEAD
-
-=======
->>>>>>> b60838e21873c946e9a500b61c53dad283e4a55e
+gunicorn
