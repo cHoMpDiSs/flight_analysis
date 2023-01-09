@@ -6,8 +6,7 @@ from .secret import *
 app = Flask(__name__)
 
 
-# app.app_context()
-# from flask import app
+
 # this is where we connect to the database
 
 
