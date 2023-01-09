@@ -42,15 +42,16 @@ def plotting():
     areas = list(data.keys())
     values = list(data.values())
     
-    fig = plt.figure(figsize = (5, 5))
+    fig = plt.figure(figsize = (10, 10))
 
-    plt.bar(areas, [int(x) for x in values], color ='maroon',
+    
+    plt.bar( areas, [int(x) for x in values], color ='maroon',
         width = 0.4)
    
     plt.xlabel("Flight Analysis")
     plt.ylabel("No. of flights affected")
     plt.title("Jordons Flight Analysis")
-    plt.show()    
+    plt.savefig('app/static/images/foo.png', dpi=150)
  
 def panda():
 
