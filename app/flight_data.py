@@ -22,12 +22,12 @@ def update_flight_data():
     flight_cancel_ww = FlightCancellationsWW(number_of_cancellations_ww=total_cancellations_ww,day_recorded=todays_date)
     db.session.add(flight_cancel_ww)
     db.session.commit()  
-    return 
+    
 
 def cut_off_delay_usa():   
     todays_date = datetime.now()
     cutoff = (datetime.now() - timedelta(days=2, hours=-1))
     FlightDelaysUSA.query.filter(FlightDelaysUSA.day_recorded<=cutoff).delete()  
-    return db.session.commit()
+    db.session.commit()
    
 
