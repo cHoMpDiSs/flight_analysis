@@ -5,10 +5,7 @@ from .secret import *
 
 app = Flask(__name__)
 
-
-
 # this is where we connect to the database
-
 
 app.config['SQLALCHEMY_DATABASE_URI'] = SECRET_STRING
 app.config["SQLALCHEMY_ECHO"] = True
@@ -21,12 +18,18 @@ migrate = Migrate(app, db)
 from app import views, models, flight_data
 db.init_app(app)
 db.create_all()
+
 from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.combining import OrTrigger
+from apscheduler.triggers.cron import CronTrigger
+
+trigger = OrTrigger([CronTrigger(hour=5),CronTrigger(hour=15),CronTrigger(hour=20)])
 
 sched = BackgroundScheduler()
-sched.add_job(func=flight_data.update_flight_data, trigger='interval',days=1)
-sched.add_job(func=flight_data.cut_off_delay_usa, trigger='interval',days=1)
-sched.add_job(func=scraper.plotting, trigger='interval',days=1)
+sched.add_job(flight_data.update_flight_data, trigger)
+sched.add_job(flight_data.cut_off_delay_usa, trigger)
+sched.add_job(scraper.plotting, trigger)
+
 sched.start()
 
 
