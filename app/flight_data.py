@@ -9,16 +9,13 @@ def update_flight_data():
     total_ww, total_usa, total_cancellations_ww, total_cancellations_usa = flight_scraper()   
     flights_usa = FlightDelaysUSA(number_of_delays=total_usa,day_recorded=todays_date)
     db.session.add(flights_usa)
-    db.session.commit()  
-
+     
     flights_ww = FlightDelaysWW(number_of_delays_ww=total_ww,day_recorded=todays_date)
     db.session.add(flights_ww)    
-    db.session.commit()  
-
+    
     flight_cancel_usa = FlightCancellationsUSA(number_of_cancellations_usa=total_cancellations_usa,day_recorded=todays_date)
     db.session.add(flight_cancel_usa)
-    db.session.commit()  
-
+    
     flight_cancel_ww = FlightCancellationsWW(number_of_cancellations_ww=total_cancellations_ww,day_recorded=todays_date)
     db.session.add(flight_cancel_ww)
     db.session.commit()  
