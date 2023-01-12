@@ -23,7 +23,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.combining import OrTrigger
 from apscheduler.triggers.cron import CronTrigger
 
-trigger = OrTrigger([CronTrigger(hour=5),CronTrigger(hour=15),CronTrigger(hour=20)])
+trigger = OrTrigger([CronTrigger(hour='5'),CronTrigger(hour='15'),CronTrigger(hour='20')])
 
 sched = BackgroundScheduler()
 sched.add_job(flight_data.update_flight_data, trigger)
