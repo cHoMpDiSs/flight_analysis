@@ -22,7 +22,7 @@ db.create_all()
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 
-trigger = CronTrigger(hour='*/5)
+trigger = CronTrigger(hour='*/5')
 
 sched = BackgroundScheduler()
 sched.add_job(flight_data.update_flight_data, trigger)
