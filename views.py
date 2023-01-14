@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, jsonify, redirect
-from .scraper import flight_scraper, plotting, panda
+from scraper import plotting, panda
 from run import *
-from app.models import *
-from app import app
+from models import *
 
 @app.route("/")
 def home():

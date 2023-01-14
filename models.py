@@ -1,6 +1,5 @@
 from datetime import datetime
-from app import app, db
-
+from run import db
 
 
 class FlightDelaysUSA(db.Model):
