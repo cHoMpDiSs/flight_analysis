@@ -1,7 +1,6 @@
 # Flight_Analysis
 <div id="badges">
   <img src="https://user-images.githubusercontent.com/102629027/181946301-ac3bf68f-83b9-45ee-b59c-e13785c6dc5f.png" width="50" height="50"/>
-  <img src="https://user-images.githubusercontent.com/102629027/181950938-c0fff1d1-2aae-4a7a-a298-dbd9ed66ae54.png" width="50" height="50"/>
   <img src="https://user-images.githubusercontent.com/102629027/181937283-4e85e57e-3d2a-4fdb-9dd6-442929fe95fb.png" width="50" height="50"/>
 </div>  
 
