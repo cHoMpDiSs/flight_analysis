@@ -1,1 +1,1 @@
-SECRET_STRING = "****************************************"
+SECRET_STRING = 'secret database connection string goes here'
