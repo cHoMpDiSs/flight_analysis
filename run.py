@@ -15,19 +15,22 @@ migrate = Migrate(app, db)
 db.init_app(app)
 db.create_all()
 
-from flight_data import update_flight_data, cut_off_delay
+# import flight_data #updated this
+# from models import * # and this
+
 from scraper import plotting
-from views import *
+# from views import *
+
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.combining import OrTrigger
 from apscheduler.triggers.cron import CronTrigger
 
-trigger = CronTrigger(minute='*/10')
+trigger = CronTrigger(minute='*/1')
 
 sched = BackgroundScheduler()
-sched.add_job(update_flight_data, trigger)
-sched.add_job(cut_off_delay, trigger)
+# sched.add_job(update_flight_data, trigger)
+# sched.add_job(cut_off_delay, trigger)
 sched.add_job(plotting, trigger)
 
 sched.start()
