@@ -1,3 +1,7 @@
 # Flight_Analysis
 
-Flask app. Scrapes flight cancellation & delay numbers and saves the data into a postgres database on aws for 5 days. Runs queries for data visualization.  
+Python Flask app on AWS
+
+1. Scrapes flight cancellation & delay data
+2. Inserts data into postgres database on AWS RDS
+3. Queries data for data visualization utilizing pandas and matplotlib
