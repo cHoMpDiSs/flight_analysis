@@ -5,7 +5,7 @@
   <img src="https://user-images.githubusercontent.com/102629027/181937283-4e85e57e-3d2a-4fdb-9dd6-442929fe95fb.png" width="50" height="50"/>
 </div>  
 
-Python Flask app on AWS
+Python Flask app on AWS EC2
 
 1. Scrapes flight cancellation & delay data
 2. Inserts data into postgres database on AWS RDS
