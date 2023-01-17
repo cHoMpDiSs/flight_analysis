@@ -2,7 +2,7 @@ from datetime import datetime, date, timedelta
 from .functions import flight_scraper
 from app import db
 from .models import *
-# from models import FlightDelaysUSA
+
 
 def update_flight_data():
     todays_date = datetime.now()
