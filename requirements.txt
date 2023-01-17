@@ -13,3 +13,5 @@ SQLAlchemy==1.4.17
 APScheduler==3.9.1.post1
 gunicorn
 lxml
+FlightRadarAPI
+deprecated

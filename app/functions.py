@@ -5,10 +5,9 @@ from pandas import *
 from bs4 import BeautifulSoup
 import schedule
 import time
-from models import * #<------------------
 from datetime import datetime, date, timedelta
 from sqlalchemy import desc
-
+from .models import *
 
 def db_query():
     flight_delays_usa = FlightDelaysUSA.query.order_by(desc(FlightDelaysUSA.day_recorded)).limit(1).all()
@@ -52,7 +51,7 @@ def plotting():
     plt.xlabel("Flight Analysis")
     plt.ylabel("No. of flights affected")
     plt.title("Jordons Flight Analysis")
-    plt.savefig('static/images/foo.png', dpi=150)
+    plt.savefig('app/static/images/foo.png', dpi=150)
  
 def panda():
     flight_delays_usa, flight_delays_ww, flight_cancellations_usa, flight_cancellations_ww = db_query()
@@ -66,4 +65,3 @@ def panda():
     df = pd.DataFrame(data)
     html = df.to_html()
     return html
-
