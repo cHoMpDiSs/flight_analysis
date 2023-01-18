@@ -10,10 +10,10 @@ from sqlalchemy import desc
 from .models import *
 
 def db_query():
-    flight_delays_usa = FlightDelaysUSA.query.order_by(desc(FlightDelaysUSA.day_recorded)).limit(1).all()
-    flight_delays_ww = FlightDelaysWW.query.order_by(desc(FlightDelaysWW.day_recorded)).limit(1).all()
-    flight_cancellations_usa = FlightCancellationsUSA.query.order_by(desc(FlightCancellationsUSA.day_recorded)).limit(1).all()
-    flight_cancellations_ww = FlightCancellationsWW.query.order_by(desc(FlightCancellationsWW.day_recorded)).limit(1).all()
+    flight_delays_usa = FlightDelaysUSA.query.order_by(desc(FlightDelaysUSA.id)).limit(1).all()
+    flight_delays_ww = FlightDelaysWW.query.order_by(desc(FlightDelaysWW.id)).limit(1).all()
+    flight_cancellations_usa = FlightCancellationsUSA.query.order_by(desc(FlightCancellationsUSA.id)).limit(1).all()
+    flight_cancellations_ww = FlightCancellationsWW.query.order_by(desc(FlightCancellationsWW.id)).limit(1).all()
     return flight_delays_usa, flight_delays_ww, flight_cancellations_usa, flight_cancellations_ww
 
 

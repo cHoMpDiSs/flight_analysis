@@ -6,7 +6,7 @@ from .models import *
 
 def update_flight_data():
     todays_date = datetime.now()
-    total_ww, total_usa, total_cancellations_ww, total_cancellations_usa = scraper.flight_scraper()   
+    total_ww, total_usa, total_cancellations_ww, total_cancellations_usa = flight_scraper()   
     
     flights_usa = FlightDelaysUSA(number_of_delays=total_usa,day_recorded=todays_date)
     db.session.add(flights_usa)

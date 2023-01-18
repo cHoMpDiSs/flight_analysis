@@ -19,7 +19,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.combining import OrTrigger
 from apscheduler.triggers.cron import CronTrigger
 
-trigger = CronTrigger(hour='*/5')
+trigger = CronTrigger(hour='*/4')
+
 
 from .functions import plotting
 from .flight_data import update_flight_data, cut_off_delay
