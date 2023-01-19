@@ -19,7 +19,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.combining import OrTrigger
 from apscheduler.triggers.cron import CronTrigger
 
-trigger = CronTrigger(hour='*/4')
+trigger = CronTrigger(minute='*/1')
 
 
 from .functions import plotting
