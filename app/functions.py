@@ -52,7 +52,9 @@ def plotting():
     plt.ylabel("No. of flights affected")
     plt.title("Jordons Flight Analysis")
     plt.savefig('app/static/images/foo.png', dpi=150)
- 
+   
+
+
 def panda():
     flight_delays_usa, flight_delays_ww, flight_cancellations_usa, flight_cancellations_ww = db_query()
     data = ({

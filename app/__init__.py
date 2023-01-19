@@ -30,6 +30,5 @@ from .flight_data import update_flight_data, cut_off_delay
 sched = BackgroundScheduler()
 sched.add_job(update_flight_data, trigger)
 sched.add_job(cut_off_delay, trigger)
-sched.add_job(plotting, trigger)
 
 sched.start()
