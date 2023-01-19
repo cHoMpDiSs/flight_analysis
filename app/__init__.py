@@ -24,8 +24,8 @@ from apscheduler.triggers.cron import CronTrigger
 trigger = CronTrigger(minute='*/1')
 
 
-from functions import plotting
-from flight_data import update_flight_data, cut_off_delay
+from .functions import plotting
+from .flight_data import update_flight_data, cut_off_delay
 
 sched = BackgroundScheduler()
 sched.add_job(update_flight_data, trigger)
