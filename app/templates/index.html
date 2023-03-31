@@ -1,54 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="static/css/style.css"/>
-    <title>Jordon's Flight Analysis</title>
-<head/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3aa987b671.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css"/>
+
+    <title>Flight Analysis</title>
+    <meta property="og:url"                content="http://flight-analysis.com" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Flight Analysis" />
+    <meta property="og:description"        content="by Jordon" />
+    <meta property="og:image"              content="https://s3.us-west-1.amazonaws.com/jordonmarchesano.com/images/airplane.png" />
+</head>
 <body>
-    <h1>Flight Analysis</h1>
+       
     
-    <section>
-        <div>
-        <a href="static/images/foo.png" add target="_blank" size:150%>Bar Plot in Matplotlib</a>
-        </div>
+    <section class="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" target="_blank" href="https://github.com/cHoMpDiSs/flight_analysis">Flight Analysis</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse"  id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#delays">Delays</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#cancellations">Cancellations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="static/images/foo.png"">Bar Chart with Matplotlib</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-        <div>
-            <a href="http://flight-analysis.com/pandas">Pandas DataFrame</a>
-        </div>
-        <h3>FLIGHT DELAYS USA</h3>
-        <ul>
-            {% for item in data1 %}
-                <li>Number of flights USA:{{item.number_of_delays}}</li>
-                <li>Time data recorded:{{item.day_recorded}}</li>
-            {% endfor %}
-
-        </ul>
-        <h3>FLIGHT DELAYS WORLDWIDE</h3>
-        <ul>
-            {% for item in data2 %}
-                <li>Number of flights WW:{{item.number_of_delays_ww}}</li>
-                <li>Time data recorded:{{item.day_recorded}}</li>
-            {% endfor %}
-
-        </ul>
-        <h3>FLIGHT CANCELLATIONS USA</h3>
-        <ul>
-            {% for item in data3 %}
-                <li>Number of flights USA:{{item.number_of_cancellations_usa}}</li>
-                <li>Time data recorded:{{item.day_recorded}}</li>
-            {% endfor %}
-
-        </ul>
-        <h3>FLIGHT CANCELLATIONS WORLDWIDE</h3>
-        <ul>
-            {% for item in data4 %}
-                <li>Number of flights WW:{{item.number_of_cancellations_ww}}</li>
-                <li>Time data recorded:{{item.day_recorded}}</li>
-            {% endfor %}
-
-        </ul>
-        </ul>
     </section>
 
-</body>  
+    <section class="top-container" id="home">
+        <h1>Flight Cancellations & Delay statistics Worldwide</h1>
+        <div class="plane-image-div">
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <img class="plane-img" src="/static/images/airplane.png">
+                  </div>
+                  <div class="col">
+                    <img class="plane-img" src="/static/images/worldwide.png">
+                  </div>
+                  <div class="col">
+                    <img class="control-tower" src="/static/images/control-tower.png">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="intro-text">
+            <p>Flight data is updated every 5th hour <i class="fa-solid fa-hourglass-end"></i></p>
+        </div>
+        
+      </section>
+
+      <div class="bar">
+        <img class="bar-chart" src="/static/images/foo.png">
+      </div>
+      
+
+    <section class="delays" id="delays">
+      
+        <h2 class="delay-background-text">Delays USA</h2>
+
+        <ul>
+            {% for item in data1 %}
+              <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays}} flight delays in the United States as of {{item.day_recorded}} UTC.
+                This has affected {{item.number_of_delays * 90.7}} passengers today. This number was calculated on the average of 90.7 passengers per domestic flight. 
+              </p>
+            {% endfor %}
+            
+        </ul>
+      
+        
+    </section>
+    <div class="section-spacer">
+
+    </div>
+    <section class="delays-ww">
+
+      <h2 class="delay-background-text">Delays Worldwide</h2>
+      <ul>
+          {% for item in data2 %}
+          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight delays Worldwide as of {{item.day_recorded}} UTC. 
+            This has affected approximately {{item.number_of_delays_ww * 141.5}} international passengers today. This number was calculated on the average of 141.5 passengers per internationl flight.
+          </p>
+          {% endfor %}
+
+      </ul>
+    </section>
+    <div class="section-spacer">
+
+    </div>
+    <section class="cancellations" id="cancellations">
+        
+
+        <h2 class="delay-background-text">CANCELLATIONS USA</h2>
+        <ul>
+            {% for item in data3 %}
+                <p class="delay-background-text p-body">Today in the United States there were a total of {{item.number_of_cancellations_usa}} as of {{item.day_recorded}} UTC.
+                  this affects approximately {{item.number_of_cancellations_usa * 90.7}} total passengers. This number was calculated on the average of 90.7 domestic passengers per flight.<p>
+                
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+ <div class="section-spacer">
+
+ </div>
+ 
+    <section class="cancellations-ww">
+      <h2 class="delay-background-text">CANCELLATIONS WORLDWIDE</h2>
+      <ul>
+          {% for item in data4 %}
+          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight cancellations Worldwide as of {{item.day_recorded}} UTC. 
+            This has affected approximately {{item.number_of_cancellations_ww * 141.5}} international passengers today. This number was calculated on the average of 141.5 passengers per internationl flight.
+          {% endfor %}
+
+      </ul>
+    </section>
+    <div class="section-spacer">
+
+    </div>
+    <div class="footer">
+      <p id="footer-p">Created by <a href="http://jordonmarchesano.com" style="color: black;" target="_blank">Jordon Marchesano</a></p>
+    </div>
+
+</body>
+</html>

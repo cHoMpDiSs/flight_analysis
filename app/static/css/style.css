@@ -1,15 +1,153 @@
 body {
     
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
+
 }
 
-h1, a{
-    color: rgb(120, 91, 149);
-    font: 32px  Monospace, serif;
-}
-
-h3,li{
-    color:rgb(120, 91, 149);
-    font:Monospace;
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    padding-top: 2rem;  
+  
     
+}
+
+h2{
+    margin-top: 4rem;
+    padding-left: .75rem;
+    padding-right: 1rem;
+}
+h4{
+    padding-right: 1.5rem;
+}
+li{
+    /* padding:1rem; */
+    padding-right: 1.5rem;
+    list-style-type: none;
+    margin-right: 1.5rem;
+}
+    
+
+/* NAV BAR */
+.nav{
+    margin:0;
+}
+
+
+/* TOP CONTAINER */
+
+.top-container{
+    text-align: center;
+    padding-top: 8rem;
+    height: 800px;
+    
+}
+
+.plane-img{
+    margin-top: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.control-tower{
+    margin-top: 8rem;
+    width: 50%;
+
+}
+
+.intro-text{
+    margin-top: 5rem;
+}
+
+.bar{
+    text-align: center;
+}
+
+.bar-chart{
+    width: 50%;
+  
+}
+
+/* DELAYS */
+
+.delays{
+    background-image: url("/static/images/girl-airport.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+
+    height:800px;
+    margin: 10rem 8rem 0 8rem;
+   
+}.delays-ww{
+    background-image: url("/static/images/airport.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    height:800px;
+    margin: 0 8rem 0 8rem;
+}
+.delay-background-text{
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    
+    border: solid 5px black;
+    display: inline-block;
+    background-color: aliceblue;
+}
+
+.delay-background{
+    max-width: 100%;
+    position: absolute;
+}
+.p-body{
+    font-size: 1.75rem;
+    margin-top: 3rem;
+    margin-right: 1.75rem;
+}
+
+
+
+
+/* Cancellations */
+
+.cancellations{
+    background-image: url("/static/images/grounded-aircraft.jpg");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    height:800px;
+    margin: 0 8rem 0 8rem;
+   
+}
+
+.cancellations-ww{
+    background-image: url("/static/images/airbus.jpg");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    height:800px;
+    width: auto;
+    margin: 0 8rem 0 8rem;
+    
+}
+
+.section-spacer{
+    height: 150px;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 100px;
+    background-color: rgb(108, 152, 229);
+}
+
+#footer-p{
+    padding-top: 2rem;
+    text-align: center;
 }
