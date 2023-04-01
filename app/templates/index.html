@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/3aa987b671.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css"/>
 
     <title>Flight Analysis</title>
@@ -17,7 +17,7 @@
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="Flight Analysis" />
     <meta property="og:description"        content="by Jordon" />
-    <meta property="og:image"              content="https://s3.us-west-1.amazonaws.com/jordonmarchesano.com/images/airplane.png" />
+    <meta property="og:image"              content="https://s3.us-west-1.amazonaws.com/jordonmarchesano.com/images/foo.png" />
 </head>
 <body>
        
@@ -32,13 +32,16 @@
               <div class="collapse navbar-collapse"  id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="#delays">Delays</a>
+                    <a class="nav-link" href="#usa">USA</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#cancellations">Cancellations</a>
+                    <a class="nav-link" href="#ww">WorldWide</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" target="_blank" href="static/images/foo.png"">Bar Chart with Matplotlib</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://flight-analysis.com/pandas">Pandas dataframe</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link disabled"></a>
@@ -70,79 +73,59 @@
         <div class="intro-text">
             <p>Flight data is updated every 5th hour <i class="fa-solid fa-hourglass-end"></i></p>
         </div>
+      
+   
+    </section>
+
+    <div class="bar">
+      <img class="bar-chart" src="/static/images/foo.png">
+    </div>
+
+    <section class="usa" id="usa">
+        <img src="/static/images/usa.png" style="width: 20%;">
+        <h2 class="delay-background-text">United States</h2>
         
-      </section>
-
-      <div class="bar">
-        <img class="bar-chart" src="/static/images/foo.png">
-      </div>
-      
-
-    <section class="delays" id="delays">
-      
-        <h2 class="delay-background-text">Delays USA</h2>
-
         <ul>
             {% for item in data1 %}
               <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays}} flight delays in the United States as of {{item.day_recorded}} UTC.
-                This has affected {{item.number_of_delays * 90.7}} passengers today. This number was calculated on the average of 90.7 passengers per domestic flight. 
+                This has affected {{item.number_of_delays * 90.7}} passengers today.  
               </p>
             {% endfor %}
             
         </ul>
-      
         
-    </section>
-    <div class="section-spacer">
-
-    </div>
-    <section class="delays-ww">
-
-      <h2 class="delay-background-text">Delays Worldwide</h2>
-      <ul>
-          {% for item in data2 %}
-          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight delays Worldwide as of {{item.day_recorded}} UTC. 
-            This has affected approximately {{item.number_of_delays_ww * 141.5}} international passengers today. This number was calculated on the average of 141.5 passengers per internationl flight.
-          </p>
-          {% endfor %}
-
-      </ul>
-    </section>
-    <div class="section-spacer">
-
-    </div>
-    <section class="cancellations" id="cancellations">
-        
-
-        <h2 class="delay-background-text">CANCELLATIONS USA</h2>
         <ul>
             {% for item in data3 %}
-                <p class="delay-background-text p-body">Today in the United States there were a total of {{item.number_of_cancellations_usa}} as of {{item.day_recorded}} UTC.
-                  this affects approximately {{item.number_of_cancellations_usa * 90.7}} total passengers. This number was calculated on the average of 90.7 domestic passengers per flight.<p>
+                <p class="p-body">Furthermore, in the United States there were a total of {{item.number_of_cancellations_usa}} as of {{item.day_recorded}} UTC.
+                  this affects approximately {{item.number_of_cancellations_usa * 90.7}} total passengers. These numbers are an approximation based on the average of 90.7 domestic passengers per flight.<p>
                 
             {% endfor %}
 
         </ul>
-
-    </section>
-
- <div class="section-spacer">
-
- </div>
- 
-    <section class="cancellations-ww">
-      <h2 class="delay-background-text">CANCELLATIONS WORLDWIDE</h2>
-      <ul>
-          {% for item in data4 %}
-          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight cancellations Worldwide as of {{item.day_recorded}} UTC. 
-            This has affected approximately {{item.number_of_cancellations_ww * 141.5}} international passengers today. This number was calculated on the average of 141.5 passengers per internationl flight.
-          {% endfor %}
-
-      </ul>
+        
     </section>
     <div class="section-spacer">
 
     </div>
+    <section class="ww" id="ww">
+      <img src="/static/images/earth.png" style="width: 20%; padding-bottom: 4%;">
+      <h2 class="delay-background-text">Worldwide</h2>
+      <ul>
+          {% for item in data2 %}
+          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight delays Worldwide as of {{item.day_recorded}} UTC. 
+            This has affected approximately {{item.number_of_delays_ww * 141.5}} international passengers today. 
+          </p>
+          {% endfor %}
+          <ul>
+            {% for item in data4 %}
+            <p class="p-body">Furthermore, there were a total of {{item.number_of_cancellations_ww}} flight cancellations Worldwide as of {{item.day_recorded}} UTC. 
+              This has affected approximately {{item.number_of_cancellations_ww * 141.5}} international passengers today. These numbers are an approximation based on the average of 141.5 passengers per internationl flight.
+            {% endfor %}
+
+        </ul>
+      </ul>
+    </section>
+    <div class="section-spacer">
     <div class="footer">
       <p id="footer-p">Created by <a href="http://jordonmarchesano.com" style="color: black;" target="_blank">Jordon Marchesano</a></p>
     </div>
