@@ -19,4 +19,4 @@ def plot():
     return send_file('static/images/foo.png',
     mimetype='image/png',
     attachment_filename='foo.png'), 200
-    
+

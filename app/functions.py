@@ -50,7 +50,7 @@ def plotting():
     addlabels(areas, values)
     plt.xlabel("Flight Analysis")
     plt.ylabel("No. of flights affected")
-    plt.title("Jordons Flight Analysis")
+    plt.title("Jordon's Flight Analysis")
     plt.savefig('app/static/images/foo.png', dpi=150)
    
 
