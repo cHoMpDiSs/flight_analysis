@@ -67,3 +67,12 @@ def panda():
     df = pd.DataFrame(data)
     html = df.to_html()
     return html
+
+def flight_numbers():
+    flight_delays_usa, flight_delays_ww, flight_cancellations_usa, flight_cancellations_ww = db_query()
+    usa_d = str(flight_delays_usa[0].day_recorded)[:11]
+    usa_c = 0
+    ww_d = 0
+    ww_c = 0
+    print(usa_d, "*************************")
+    print(type(usa_d))
