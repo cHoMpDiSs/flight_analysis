@@ -144,6 +144,76 @@ ul{
     text-align: center;
 }
 
+
+/* Keyframes for animating from the left side */
+@keyframes animateLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for animating from the bottom side */
+  @keyframes animateBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for animating from the right side */
+  @keyframes animateRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Keyframes for animating from the top side */
+@keyframes animateTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation class for top side */
+  .animate-top {
+    animation: animateTop 1s ease-in-out;
+  }
+  
+  
+  /* Animation classes for different sides */
+  .animate-left {
+    animation: animateLeft 1s ease-in-out;
+  }
+  
+  .animate-bottom {
+    animation: animateBottom 1s ease-in-out;
+  }
+  
+  .animate-right {
+    animation: animateRight 1s ease-in-out;
+  }
+  
+
+
 @media (max-width: 768px) {
     .bar-chart {
         width: 85%;

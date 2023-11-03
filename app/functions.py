@@ -29,7 +29,6 @@ def flight_scraper():
             raw_cancellations = data[3].text
             raw_cancellations_usa = data[4].text
 
-            # Process data
             total_delays = ''.join(ch for ch in raw_delays if ch.isdigit())
             total_usa = ''.join(ch for ch in raw_usa if ch.isdigit())
             total_cancellations = ''.join(ch for ch in raw_cancellations if ch.isdigit())
