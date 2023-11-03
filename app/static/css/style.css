@@ -143,3 +143,9 @@ ul{
     color:white;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .bar-chart {
+        width: 75%;
+    }
+}

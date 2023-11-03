@@ -21,16 +21,10 @@ def pandas():
 @app.route("/static/images/foo.png")
 def plot():
     try:
-        plotting()  # Assuming this function generates the plot
+        plotting() 
         return send_file('static/images/foo.png', mimetype='image/png', attachment_filename='foo.png'), 200
     except Exception as e:
-        # Handle the specific exception that might occur during plotting
         error_message = f"An error occurred while generating the plot: {str(e)}"
-        # Log the error, display a generic image, or provide a specific error message
-        return error_message, 500  # Return a 500 Internal Server Error status code
+        return error_message, 500  
 
     
-
-# @app.route("/test")
-# def test():
-   
