@@ -146,6 +146,6 @@ ul{
 
 @media (max-width: 768px) {
     .bar-chart {
-        width: 75%;
+        width: 100%;
     }
 }
