@@ -119,6 +119,7 @@ ul{
    
 }
 
+
 .cancellations-ww{
 
     text-align: center;
@@ -212,23 +213,37 @@ ul{
     animation: animateRight 1s ease-in-out;
   }
   
-/* Keyframes for scrolling animation */
-@keyframes scrollAnimation {
+/* Styles to mimic typing effect */
+#typed-text {
+    overflow: hidden; /* Hides the overflowed text */
+    border-right: .15em solid #000; /* Adds a blinking cursor */
+    white-space: nowrap; /* Keeps text in one line */
+    margin: 0; /* Reset margins */
+}
+
+/* Styles to rotate the hourglass icon */
+@keyframes rotate {
     from {
-        transform: translateY(-100%);
-        opacity: 0;
+        transform: rotate(0);
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: rotate(360deg);
     }
 }
 
-/* Apply the animation with a delay */
-.animated-scroll {
-    animation: scrollAnimation 1s ease-in-out 0.5s;
-    /* adjust delay and duration to your preference */
+.fa-hourglass-end {
+    display: inline-block;
+    animation: rotate 3s linear infinite; /* Adjust the duration and other animation properties as needed */
 }
+
+
+
+/* Animation to simulate typing */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
 
 
 @media (max-width: 768px) {
