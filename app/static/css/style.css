@@ -212,6 +212,23 @@ ul{
     animation: animateRight 1s ease-in-out;
   }
   
+/* Keyframes for scrolling animation */
+@keyframes scrollAnimation {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation with a delay */
+.animated-scroll {
+    animation: scrollAnimation 1s ease-in-out 0.5s;
+    /* adjust delay and duration to your preference */
+}
 
 
 @media (max-width: 768px) {
