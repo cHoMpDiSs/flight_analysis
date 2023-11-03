@@ -135,10 +135,11 @@ ul{
 
 .footer{
     height: 100px;
-    background-color: rgb(108, 152, 229);
+    background-color: rgb(35, 33, 33);
 }
 
 #footer-p{
     padding-top: 2rem;
+    color:white;
     text-align: center;
 }
