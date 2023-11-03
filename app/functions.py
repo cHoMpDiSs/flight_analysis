@@ -59,7 +59,6 @@ def plotting():
         for i in range(len(x)):
             plt.text(i, int(y[i]), int(y[i]), ha = 'center')
    
-    
     fig = plt.figure(figsize = (10, 10))
    
     plt.bar( areas, [int(x) for x in values], color ='maroon',
