@@ -49,7 +49,7 @@ def flight_scraper():
 
 
 def plotting():
-    plt.pyplot.switch_backend('Agg') 
+   
     flight_delays_usa, flight_delays_ww, flight_cancellations_usa, flight_cancellations_ww = db_query()
     data ={ 'USA Cancellations': str(flight_cancellations_usa[0].number_of_cancellations_usa), 'World Cancellations': str(flight_cancellations_ww[0].number_of_cancellations_ww),'USA Delays': str(flight_delays_usa[0].number_of_delays), 'World Delays': str(flight_delays_ww[0].number_of_delays_ww)}
     areas = list(data.keys())
