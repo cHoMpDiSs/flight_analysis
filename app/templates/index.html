@@ -86,22 +86,20 @@
         <h2 class="delay-background-text">United States</h2>
         
         <ul>
-            {% for item in data1%}
-              <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays}} flight delays in the United States as of {{ud}} UTC.
-                This has affected {{item.number_of_delays * 90.7}} passengers today.  
+          {% for item in data1 %}
+              <p class="delay-background-text p-body">Today there were a total of {{ "{:,}".format(item.number_of_delays) }} flight delays in the United States as of {{ ud }} UTC.
+                  This has affected {{ "{:,}".format(item.number_of_delays * 90) }} passengers today.  
               </p>
-            {% endfor %}
-            
-        </ul>
-        
-        <ul>
-            {% for item in data3 %}
-                <p class="p-body">Furthermore, in the United States there were a total of {{item.number_of_cancellations_usa}} as of {{uc}} UTC.
-                  this affects approximately {{item.number_of_cancellations_usa * 90.7}} total passengers. These numbers are an approximation based on the average of 90.7 domestic passengers per flight.<p>
-                
-            {% endfor %}
-
-        </ul>
+          {% endfor %}
+      </ul>
+      
+      <ul>
+          {% for item in data3 %}
+              <p class="p-body">Furthermore, in the United States there were a total of {{ "{:,}".format(item.number_of_cancellations_usa) }} as of {{ uc }} UTC.
+                  this affects approximately {{ "{:,}".format(item.number_of_cancellations_usa * 90) }} total passengers. These numbers are an approximation based on the average of 90 domestic passengers per flight.<p>
+          {% endfor %}
+      </ul>
+      
         
     </section>
     <div class="section-spacer">
@@ -112,15 +110,16 @@
       <h2 class="delay-background-text">Worldwide</h2>
       <ul>
           {% for item in data2 %}
-          <p class="delay-background-text p-body">Today there were a total of {{item.number_of_delays_ww}} flight delays Worldwide as of {{wd}} UTC. 
-            This has affected approximately {{item.number_of_delays_ww * 141.5}} international passengers today. 
+          <p class="delay-background-text p-body">Today there were a total of {{ "{:,}".format(item.number_of_delays_ww) }} flight delays Worldwide as of {{wd}} UTC. 
+            This has affected approximately {{ "{:,}".format(item.number_of_delays_ww * 141) }}  international passengers today. 
           </p>
           {% endfor %}
           <ul>
             {% for item in data4 %}
-            <p class="p-body">Furthermore, there were a total of {{item.number_of_cancellations_ww}} flight cancellations Worldwide as of {{wc}} UTC. 
-              This has affected approximately {{item.number_of_cancellations_ww * 141.5}} international passengers today. These numbers are an approximation based on the average of 141.5 passengers per internationl flight.
-            {% endfor %}
+            <p class="p-body">Furthermore, there were a total of {{ "{:,}".format(item.number_of_cancellations_ww) }} flight cancellations Worldwide as of {{ wc }} UTC. 
+                This has affected approximately {{ "{:,}".format(item.number_of_cancellations_ww * 141) }} international passengers today. These numbers are an approximation based on the average of 141 passengers per international flight.
+            </p>
+        {% endfor %}
 
         </ul>
       </ul>
