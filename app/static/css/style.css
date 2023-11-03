@@ -145,6 +145,24 @@ ul{
     text-align: center;
 }
 
+/* Common class to make images pop out on hover */
+.pop-out {
+    transition: transform 0.2s ease /* Smooth transition effect */
+}
+
+.pop-out:hover {
+    transform: scale(1.50); /* Increase size on hover */
+  
+}
+
+.pop-out2 {
+    transition: transform 0.2s ease /* Smooth transition effect */
+}
+
+.pop-out2:hover {
+    transform: scale(1.2); /* Increase size on hover */
+  
+}
 
 /* Keyframes for animating from the left side */
 @keyframes animateLeft {

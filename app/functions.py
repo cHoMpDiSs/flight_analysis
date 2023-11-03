@@ -59,8 +59,8 @@ def plotting():
             plt.text(i, int(y[i]), int(y[i]), ha = 'center')
    
     fig = plt.figure(figsize = (10, 10))
-   
-    plt.bar( areas, [int(x) for x in values], color ='maroon',
+    colors = ['maroon', 'green', 'blue', 'orange']
+    plt.bar( areas, [int(x) for x in values], color=colors,
         width = 0.4)
     addlabels(areas, values)
     plt.xlabel("Flight Analysis")
