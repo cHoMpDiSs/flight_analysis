@@ -163,6 +163,15 @@ ul{
     transform: scale(1.2); /* Increase size on hover */
   
 }
+.bar-pop {
+    transition: transform 0.2s ease /* Smooth transition effect */
+}
+
+.bar-pop:hover {
+    transform: scale(1.25); /* Increase size on hover */
+  
+}
+
 
 /* Keyframes for animating from the left side */
 @keyframes animateLeft {
