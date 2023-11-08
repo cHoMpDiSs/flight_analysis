@@ -151,7 +151,7 @@ ul{
 }
 
 .pop-out:hover {
-    transform: scale(1.50); /* Increase size on hover */
+    transform: scale(1.20); /* Increase size on hover */
   
 }
 
@@ -168,7 +168,7 @@ ul{
 }
 
 .bar-pop:hover {
-    transform: scale(1.25); /* Increase size on hover */
+    transform: scale(1.01); /* Increase size on hover */
   
 }
 
