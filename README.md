@@ -12,4 +12,5 @@ Python Flask app on AWS EC2
 3. Queries data for data visualization utilizing pandas and matplotlib
 
 
- ![Amazon-Web-Services-AWS-Emblem](https://user-images.githubusercontent.com/102629027/212450209-15c7080c-2224-4531-8a72-5d237fd8197a.png)
+ 
+ <img src="https://user-images.githubusercontent.com/102629027/212450209-15c7080c-2224-4531-8a72-5d237fd8197a.png" width="50" height="50"/>
