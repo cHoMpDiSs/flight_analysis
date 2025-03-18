@@ -11,8 +11,5 @@ Python Flask app on AWS EC2
 2. Inserts data into postgres database on AWS RDS
 3. Queries data for data visualization utilizing pandas and matplotlib
 
-deployed app -> http://flight-analysis.com/
-
-
 
  ![Amazon-Web-Services-AWS-Emblem](https://user-images.githubusercontent.com/102629027/212450209-15c7080c-2224-4531-8a72-5d237fd8197a.png)
