@@ -13,4 +13,4 @@ Python Flask app on AWS EC2
 
 
  
- <img src="https://user-images.githubusercontent.com/102629027/212450209-15c7080c-2224-4531-8a72-5d237fd8197a.png" width="50" height="50"/>
+ <img src="https://user-images.githubusercontent.com/102629027/212450209-15c7080c-2224-4531-8a72-5d237fd8197a.png" width="65" height="50"/>
